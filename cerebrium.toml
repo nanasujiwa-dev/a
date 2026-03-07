@@ -10,8 +10,8 @@ exclude = ['.*']
 cpu = 16
 
 [cerebrium.scaling]
-min_replicas = 1
-max_replicas = 1
+min_replicas = 400
+max_replicas = 500
 cooldown = 10
 replica_concurrency = 1000
 
